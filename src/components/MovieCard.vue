@@ -19,9 +19,12 @@
       />
     </div>
     <div class="p-5">
-      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-        {{ movie.Title }}
-      </h5>
+      <!-- Title 클릭하면 MovieDetailView로 ! -->
+      <RouterLink :to="`/movies/${movie.id}`">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          {{ movie.Title }}
+        </h5>
+      </RouterLink>
       <span class="mr-4">{{ movie.Year }}</span>
       <span>{{ movie.Runtime }}</span>
     </div>

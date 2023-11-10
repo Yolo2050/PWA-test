@@ -6,7 +6,12 @@ import AboutView from '@/views/AboutView.vue'
 const routes = [
   { path: '/', name: 'home', component: HomeView },
   { path: '/about', name: 'about', component: AboutView },
-  { path: '/movies', name: 'movies', component: () => import('@/views/MoviesView.vue') }
+  { path: '/movies', name: 'movies', component: () => import('@/views/MoviesView.vue') },
+  {
+    path: '/movies/:id',
+    name: 'movie-detail',
+    component: () => import('@/views/MovieDetailsView.vue')
+  }
 
   // route level code-splitting
   // this generates a separate chunk (MoviesView.[hash].js) for this route

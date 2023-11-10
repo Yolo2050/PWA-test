@@ -19,3 +19,12 @@ Vue Router 4 tutorial by Code with Tony [Youtube playlist](https://www.youtube.c
 5. Create Navbar Component
 
 - flowbite.com > Quick start > NacBar(in component)
+
+6. Dynamic Routes
+
+- index.js의 routes에 추가 { path: '/movies/:id', name: 'movie-detail', component: () => import('@/views/MovieDetailsView.vue') }
+
+  - <h1>Movie {{ $route.params.id }} Details Page</h1>
+  -     const result = await fetch(`http://localhost:3000/movies/${route.params.id}`)
+
+7.
