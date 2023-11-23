@@ -15,7 +15,7 @@
     Select a Book to play with !
   </div>
   <div
-    class="flex flex-wrap items-center justify-center rounded-3xl border-4 border-double border-indigo-400 bg-black p-8 text-base font-bold text-white"
+    class="grid grid-cols-5 items-center justify-center gap-4 rounded-3xl border-4 border-double border-indigo-400 bg-black p-8 text-base font-bold text-white"
   >
     <div
       v-for="book in books"
@@ -36,12 +36,12 @@
   </div>
 </template>
 <style scoped>
-  ul {
+  /* ul {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-  }
+  } */
   ul.background {
     background-image: url('../assets/images/BackGround/img_main.png');
     /* background-size: cover; */
