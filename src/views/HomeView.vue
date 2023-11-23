@@ -29,8 +29,6 @@
       <div class="wrapper pb-5 text-center text-2xl">
         <h1 class="">Welcome to Feinschule playbook library !</h1>
       </div>
-
-      <p>Select a Book to play with !</p>
     </header>
 
     <main>
