@@ -11,6 +11,11 @@ const routes = [
     path: '/movies/:id',
     name: 'movie-detail',
     component: () => import('@/views/MovieDetailsView.vue')
+  },
+  {
+    path: '/hk101a',
+    name: 'Hk101aView',
+    component: () => import('@/views/HolywoodKidsStoryHomeView.vue')
   }
 
   // route level code-splitting

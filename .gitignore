@@ -28,4 +28,4 @@ coverage
 *.sw?
 
 # data 
-/src/data/*
+/src/assets/data/*

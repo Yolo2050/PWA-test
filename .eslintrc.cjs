@@ -3,7 +3,8 @@ require('@rushstack/eslint-patch/modern-module-resolution')
 
 module.exports = {
   root: true,
-  extends: ['plugin:vue/vue3-recommended', 'eslint:recommended', '@vue/eslint-config-prettier'],
+  // extends 순서에 유의: 나중 것이 먼저 것을 override함
+  extends: ['eslint:recommended', 'plugin:vue/vue3-recommended', '@vue/eslint-config-prettier'], // this works fine!
   parserOptions: {
     ecmaVersion: 'latest'
   },
