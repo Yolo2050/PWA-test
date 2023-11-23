@@ -1,5 +1,6 @@
 <script setup>
   import { ref } from 'vue'
+  import NavBar from '@/components/NavBar.vue'
   import CategoryList from '@/components/CategoryList.vue'
   import SelectedBooksListing from '@/components/SelectedBooksListing.vue'
   import categoriesData from '/src/assets/data/category-list.json'
@@ -23,16 +24,8 @@
 
 <template>
   <div>
-    <!-- <NavBar /> -->
+    <NavBar />
     <header class="lh-2">
-      <img
-        alt="Feinschule logo"
-        class="logo"
-        src="@/assets/images/feinschele142x138.png"
-        width="70"
-        height="70"
-      />
-
       <div class="wrapper pb-5 text-center text-2xl">
         <h1 class="">Welcome to Feinschule playbook library !</h1>
       </div>
