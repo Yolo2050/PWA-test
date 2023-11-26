@@ -5,6 +5,8 @@
   import SelectedBooksListing from '@/components/SelectedBooksListing.vue'
   import categoriesData from '/src/assets/data/category-list.json'
   import booksData from '/src/assets/data/booklist-total.json'
+  // temp for video test
+  // import PlayVideo from '../components/PlayVideo.vue'
 
   const categories = ref(categoriesData)
   const books = ref(booksData)
@@ -40,14 +42,11 @@
       <!-- <h5>Finish</h5> -->
     </main>
     <!-- 임시 버튼 for routing test -->
-    <button
-      class="gotoHk101a"
-      @click="() => router.push({ name: 'Hk101aView' })"
-    >
-      gotoHk101a
-    </button>
-    <!-- <test> <Hk101aView />> </test> -->
+    <!-- <button @click="() => router.push({ name: 'Hk101aView' })">gotoHk101a</button> -->
+    <button @click="() => router.push({ name: 'PlayVideo' })">Chant</button>
+
     <!-- <Hk101aView /> -->
+    <!-- <PlayVideo /> -->
   </div>
 </template>
 

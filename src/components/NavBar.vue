@@ -10,7 +10,7 @@
         class="flex items-center"
       >
         <img
-          src="/public/2023logo10.jpg"
+          src="/2023logo10.jpg"
           class="mr-3 h-8"
           alt="Feinschule Logo"
         />

@@ -1,15 +1,25 @@
 <script setup>
-  defineProps({
+  import { useRouter } from 'vue-router'
+  const router = useRouter()
+  const props = defineProps({
     book: {
       type: Object,
       required: true
     }
   })
+  const navigateToBookView = () => {
+    // Perform any additional logic before navigating to BookView
+    // For example, you can pass additional data to the route using query parameters or props
+    // Then navigate to BookView using router.push or router.replace
+    // Example: router.push({ name: 'BookView', params: { id: book.id }, query: { additionalData: 'example' } });
+    router.push({ name: 'BookView', params: { id: props.book.id } })
+  }
 </script>
 
 <template>
   <div
     class="flex max-w-sm justify-center rounded-lg border border-gray-200 bg-white pt-3 shadow-md dark:border-gray-700 dark:bg-gray-800"
+    @click="navigateToBookView"
   >
     <!--  -->
     <div class="">
