@@ -3,8 +3,8 @@
   import NavBar from '@/components/NavBar.vue'
   import CategoryList from '@/components/CategoryList.vue'
   import SelectedBooksListing from '@/components/SelectedBooksListing.vue'
-  import categoriesData from '/src/assets/data/category-list.json'
-  import booksData from '/src/assets/data/booklist-total.json'
+  import categoriesData from '@/data/category-list.json'
+  import booksData from '@/data/booklist-total.json'
   // temp for video test
   // import PlayVideo from '../components/PlayVideo.vue'
 

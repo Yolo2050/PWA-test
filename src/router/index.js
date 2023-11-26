@@ -14,12 +14,12 @@ const routes = [
     path: '/movies/:id',
     name: 'movie-detail',
     component: () => import('@/views/MovieDetailsView.vue')
-  },
-  {
-    path: '/hk101a',
-    name: 'Hk101aView',
-    component: () => import('@/views/HolywoodKidsStoryHomeView.vue')
   }
+  // {
+  //   path: '/hk101a',
+  //   name: 'Hk101aView',
+  //   component: () => import('@/views/HolywoodKidsStoryHomeView.vue')
+  // }
 
   // route level code-splitting
   // this generates a separate chunk (MoviesView.[hash].js) for this route
