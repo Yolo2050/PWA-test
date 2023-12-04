@@ -1,5 +1,8 @@
 <template>
   <div class="container">
+    <!-- Display Selected Book's Title -->
+    <h1>{{ bookStore.selectedBook.title }}</h1>
+
     <!-- Display Menu Items -->
     <ul>
       <li
@@ -25,32 +28,15 @@
 </template>
 
 <script setup>
-  import { ref, onMounted } from 'vue'
+  import { onMounted } from 'vue'
   import { useBookStore } from '@/stores/bookStore'
+  import { useRoute } from 'vue-router'
 
   const bookStore = useBookStore()
-  const currentComponent = ref(null)
+  const route = useRoute()
 
-  function selectMenuItem(index) {
-    bookStore.currentActivityIndex = index
-    updateCurrentComponent()
-  }
-
-  function selectNextItem() {
-    bookStore.selectNextActivity()
-    updateCurrentComponent()
-  }
-
-  function updateCurrentComponent() {
-    currentComponent.value = null // reset the component
-    if (bookStore.selectCurrentItem()) {
-      // if there's a next item
-      currentComponent.value = () => bookStore.getCurrentComponent() // lazy-load the component
-    }
-  }
-
-  // Select the initial item when the component is created
   onMounted(() => {
-    selectNextItem()
+    const bookId = route.params.id
+    const book = bookStore.selectBook(book) // get the book by its ID using bookId
   })
 </script>

@@ -12,7 +12,7 @@ export const useBookStore = defineStore({
     selectBook(book) {
       this.selectedBook = book
       // fetch and set activities from info_day.json file
-      fetch(`../assets/data/${book}/info_day.json`)
+      fetch(`@/data/${book}/info_day.json`)
         .then((response) => response.json())
         .then((data) => {
           this.activities = data.activities

@@ -8,16 +8,20 @@
   // temp for video test
   // import PlayVideo from '../components/PlayVideo.vue'
 
+  // 카테고리 데이터와 책 데이터를 가져옴
   const categories = ref(categoriesData)
   const books = ref(booksData)
   const selectedBooks = ref([])
 
-  /* selectCategory 함수는 선택한 카테고리에 따라 적절한 책 목록을 selectedBooks에 할당합니다. "All Category"를 선택하면 모든 책을 반환하고, 그 외의 카테고리를 선택하면 해당 카테고리의 책만 반환합니다. */
+  // selectCategory 함수는 선택한 카테고리에 해당하는 책 목록을 selectedBooks에 할당합니다.
+  // "All Category"를 선택하면 모든 책을 반환하고, 그 외의 카테고리를 선택하면 해당 카테고리의 책만 반환합니다.
   const selectCategory = (categoryId) => {
     if (categoryId === 0) {
-      // All Category
+      // Object.values()는 객체의 모든 값들을 배열로 반환
+      // Array.prototype.flat() 메서드는 중첩된 배열을 평탄화하여, 하나의 배열로 만듦
       selectedBooks.value = Object.values(books.value).flat()
     } else {
+      // find 메서드는 배열에서 주어진 판별 함수를 만족하는 첫 번째 요소를 반환
       const category = categories.value.find((category) => category.id === categoryId)
       selectedBooks.value = books.value[category['category-name-short']] || []
     }

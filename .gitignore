@@ -27,5 +27,6 @@ coverage
 *.sln
 *.sw?
 
+/src/data/*
 # data 
 # /public/assets/*
